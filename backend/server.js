@@ -37,10 +37,20 @@ async function run() {
     const store=client.db("demo1").collection("store")
 
     app.post("/contact",async(req,res)=>{
-    const data1=req.body
-  const result=await fancy.insertOne(data1)
-res.send(result)
+    app.post("/review", async (req, res) => {
+  try {
+    const data = req.body;
+    const fancy = client.db("demo").collection("reviews"); // create a new "reviews" collection
+    const result = await fancy.insertOne(data);
+    res.status(200).json({ message: "Review saved successfully", result });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error saving review" });
+  }
+});
+
 })
+
 
 app.get("/gets",async(req,res)=>{
     const data1=store.find()
