@@ -1,0 +1,147 @@
+/* Whole Section */
+.about-section {
+  background: linear-gradient(135deg, #f8f4ff, #ffffff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Main Container */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* Image Styling */
+.about-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.6s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+/* Text Styling */
+.about-text {
+  flex: 1;
+  min-width: 320px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #8e44ad;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* Info Cards */
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color:purple;
+  margin-bottom: 12px;
+}
+
+.card p,
+.card ul {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+/* Tagline Quote */
+.about-quote {
+  margin-top: 40px;
+  background:purple;
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  font-style: italic;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-text {
+    text-align: center;
+  }
+
+  .about-img {
+    max-width: 250px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}

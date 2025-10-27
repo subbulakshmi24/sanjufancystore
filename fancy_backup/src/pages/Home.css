@@ -1,0 +1,215 @@
+/* --- General Styles --- */
+.home {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background-image: url('../img/gal2.jpg'); /* Hero background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 20px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* Dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-content span {
+  color: #ffcc00; /* Highlight shop name */
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* --- Buttons --- */
+.shop-btn,
+.explore-btn {
+  background-color: purple;
+  color: white;
+  padding: 10px 20px; /* smaller buttons */
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  min-width: 120px;
+}
+
+.shop-btn:hover,
+.explore-btn:hover {
+  background-color: plum;
+  transform: scale(1.05);
+}
+
+/* --- Featured Products Section --- */
+.featured {
+  text-align: center;
+  margin: 60px 0;
+  padding: 0 20px;
+}
+
+.featured h2 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.featured-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-card .price {
+  color: purple;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.bt {
+  background-color: purple;
+  color:plum;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bt:hover {
+  background-color: plum;
+  transform: scale(1.05);
+}
+
+/* --- Promo Section --- */
+.promo-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color:plum;
+}
+
+.promo-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.promo-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .featured h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 26px;
+  }
+}
+/* --- Buttons: Shop Now, Explore More, Purchase --- */
+.shop-btn,
+.explore-btn,
+.bt {
+  background-color: purple; /* default button color */
+  color:black;
+  padding: 8px 16px;       /* smaller padding */
+  font-size: 14px;         /* smaller text */
+  border: none;
+  border-radius: 20px;
+  width:auto ;     
+}
+
+.shop-btn:hover,
+.explore-btn:hover,
+.bt:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Special color for Explore More button */
+.explore-btn {
+  background-color:purple;
+  color:black;
+}
+
+.explore-btn:hover {
+  background-color:  #ffcc00;
+}
+
